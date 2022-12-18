@@ -60,7 +60,7 @@ namespace ShopingCart.Controllers
                 {
                     string header = System.IO.File.ReadAllText(Server.MapPath(@"~/App_Start/header.txt"));
                     string footer = System.IO.File.ReadAllText(Server.MapPath(@"~/App_Start/footer.txt"));
-                    string main = String.Format(@"<h2 class='title'>Nội Thất Hồng Ngọc -Xác Nhận Đơn Hàng</h2>
+                    string main = String.Format(@"<h2 class='title'>Nội Thất Bích Thủy -Xác Nhận Đơn Hàng</h2>
                 <p>
 					<b>Họ tên người nhận:</b>
 					<span>{0}</span>
@@ -108,7 +108,7 @@ namespace ShopingCart.Controllers
                     }
                     main += @"</tbody>
 				</table>";
-                    HelpMail.SendEmail(currentUser.Email, "danhminhhm@gmail.com", "danhngoc99", "[Nội Thất Hồng Ngọc]_Đơn hàng", header + main + footer);
+                    HelpMail.SendEmail(currentUser.Email, "danhminhhm@gmail.com", "danhngoc99", "[Nội Thất Bích Thủy]_Đơn hàng", header + main + footer);
                     TempData["message"] = "Added";
                     TempData["DataSuccess"] = "Đặt hàng thành công";
 					Session[Common.CommonConstants.SESSION_CART] = null;
