@@ -108,7 +108,7 @@ namespace ShopingCart.Controllers
                     }
                     main += @"</tbody>
 				</table>";
-                    HelpMail.SendEmail(currentUser.Email, "danhminhhm@gmail.com", "danhngoc99", "[Nội Thất Bích Thủy]_Đơn hàng", header + main + footer);
+                    // HelpMail.SendEmail(currentUser.Email, "danhminhhm@gmail.com", "danhngoc99", "[Nội Thất Bích Thủy]_Đơn hàng", header + main + footer);
                     TempData["message"] = "Added";
                     TempData["DataSuccess"] = "Đặt hàng thành công";
 					Session[Common.CommonConstants.SESSION_CART] = null;
